@@ -1,6 +1,5 @@
 package com.ticket.manager.entity;
 
-import com.sun.source.doctree.EscapeTree;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

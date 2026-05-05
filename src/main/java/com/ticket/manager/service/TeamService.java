@@ -13,11 +13,13 @@ import org.springframework.transaction.annotation.Transactional;
 public class TeamService {
 
     private final TeamRepository teamRepository;
+    private final TeamConverter teamConverter;
 
     @Transactional
     public void createTeam(CreateTeamRequest request) {
 
-        TeamEntity teamToSave = TeamConverter.convertToEntity(request);
+        TeamEntity teamToSave = teamConverter.convertToEntity(request);
+
         teamRepository.save(teamToSave);
     }
 }
