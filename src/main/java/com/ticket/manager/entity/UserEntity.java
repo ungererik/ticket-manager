@@ -30,7 +30,7 @@ public class UserEntity {
     @Column(name = "level_of_position")
     private PositionLevel levelOfPosition;
 
-    @OneToMany(cascade = CascadeType.ALL,orphanRemoval = true)
-    @JoinColumn(name = "user_id")
-    private List<TeamEntity> teams = new ArrayList<>();
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "team_id")
+    private TeamEntity team;
 }

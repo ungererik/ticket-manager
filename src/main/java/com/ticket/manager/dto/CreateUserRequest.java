@@ -24,7 +24,7 @@ public class CreateUserRequest {
     @NotNull(message = "Position level is required!")
     private PositionLevel levelOfPosition;
 
-    @NotEmpty(message = "At least one team must be assigned!")
+    @NotNull(message = "At least one team must be assigned!")
     @Valid
-    private List<CreateTeamRequest> teams;
+    private Long teamId;
 }
